@@ -5,6 +5,7 @@
 const express = require('express');
 const { createTodo } = require("./types")
 const app = express();
+const {todo} = require('./db')
 
 app.use(express.json());
 
@@ -42,13 +43,13 @@ app.put('/completed' , async function(req,res){
     const updatePayload = req.body;
     const parsedPayload = createTodo.safeParse(updatePayload);
 
-    if(!parsedPayload.success){
-        res.status(411).json({
-            message:"You sent the wrong inputs"
-        })
-        return;
-    }
-    await todo.update({
+    // if(!parsedPayload.success){
+    //     res.status(411).json({
+    //         message:"You sent the wrong inputs"
+    //     })
+    //     return;
+    // }
+    await todo.updateOne({
         _id: req.body.id
     },{
         completed:true
@@ -58,3 +59,6 @@ app.put('/completed' , async function(req,res){
         msg: "Todo marked as completed"
     })
 })
+
+app.listen(3000)
+
