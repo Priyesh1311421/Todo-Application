@@ -3,11 +3,13 @@
 // write basic express boilerplate code,with express.json() middleware
 
 const express = require('express');
-const { createTodo } = require("./types")
+const { createTodo } = require("./types");
 const app = express();
+const cors = require('cors');
 const {todo} = require('./db')
 
 app.use(express.json());
+app.use(cors());
 
 
 app.post('/todo' , async function(req,res){

@@ -3,6 +3,22 @@ This project contains a simple todo application which contains the following fea
 - Anyone can create a todo 
 - Anyone can see their existing todo
 - Anyone can mark a todo as done
+##
+Things that are completed 
+ Backend 
+- Express ap
+- Zod for validation
+- Mongoose for mongo/database connection
+- MongoDb as database
+ Frontend 
+- Created two components
+- 1. Create todo
+- 2. Render todos
+##
 
-<!-- inialize a node a project -->
-<!-- put a package json -->
+Things to fix
+- Infinite requests to get todos
+- Not yet implemented update todos
+
+Things 
+ 
