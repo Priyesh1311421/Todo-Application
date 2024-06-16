@@ -1,6 +1,6 @@
 const mongoose = require('mongoose')
 
-mongoose.connect("")
+mongoose.connect("mongodb+srv://admin:Shivesh12@cluster0.2zajxvl.mongodb.net/Todo-App")
 
 const todoSchema = mongoose.Schema({
     title: String,
