@@ -20,5 +20,6 @@ Things to fix
 - Infinite requests to get todos
 - Not yet implemented update todos
 
-Things 
+Things that I fixed 
+- Implemented update todos Now user can also mark his todo as completed 
  

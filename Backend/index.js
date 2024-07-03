@@ -3,7 +3,7 @@
 // write basic express boilerplate code,with express.json() middleware
 
 const express = require('express');
-const { createTodo } = require("./types");
+const { createTodo, updateTodo } = require("./types");
 const app = express();
 const cors = require('cors');
 const {todo} = require('./db')
@@ -43,7 +43,7 @@ app.get('/todos' , async function(req,res){
 
 app.put('/completed' , async function(req,res){
     const updatePayload = req.body;
-    const parsedPayload = createTodo.safeParse(updatePayload);
+    const parsedPayload = updateTodo.safeParse(updatePayload);
 
     // if(!parsedPayload.success){
     //     res.status(411).json({
