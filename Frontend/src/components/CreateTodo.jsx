@@ -28,8 +28,7 @@ export function CreateTodo(){
                     'content-type':"application/json"
                 }
             })
-            .then(async function(res) {
-                const json = await res.json();
+            .then(async function() {
                 alert("Todo added")
             })
         }}>Add a todo</button>
